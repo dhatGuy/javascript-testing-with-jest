@@ -2,7 +2,6 @@
 
 ### Assignment
 
-<div class="lesson-content__panel" markdown="1">
 Write tests for the following functions, and then make the tests pass!
 
 1. `capitalize(string)` takes a string and returns that string with the first character capitalized.
@@ -30,4 +29,4 @@ Write tests for the following functions, and then make the tests pass!
      length: 6
    };
    ~~~
-</div>
+   
