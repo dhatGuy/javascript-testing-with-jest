@@ -1,12 +1,35 @@
 const caesar = require("./caesar");
 
 test("caesar cipher for lowercase", () => {
-  expect(caesar("hearts", 1)).toBe("ifbsut");
+  const expectedResult = "ifbsut";
+  const input = "hearts";
+  const key = 1;
+
+  const result = caesar(input, key);
+
+  expect(result).toBe(expectedResult);
 });
 test("caesar cipher for uppercase", () => {
-  expect(caesar("HEARTS", 1)).toBe("IFBSUT");
+  const expectedResult = "IFBSUT";
+  const input = "HEARTS";
+  const key = 1;
+
+  const result = caesar(input, key);
+
+  expect(result).toBe(expectedResult);
 });
 
-test("throw an error if negative", () => {
-  expect(() => caesar("hearts", -1)).toThrow("no negative value is allowed");
+it("should throw an exception", () => {
+  expect(
+    () => caesar("hello", -1) // Do not simply call func
+  ).toThrow("no negative value is allowed");
+});
+test("throw an error if negative key is passed", () => {
+  const expectedResult = "no negative value is allowed";
+  const input = "hearts";
+  const key = -9;
+
+  const result = () => caesar(input, key);
+
+  expect(result).toThrow(expectedResult);
 });

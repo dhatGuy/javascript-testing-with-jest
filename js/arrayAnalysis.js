@@ -1,4 +1,7 @@
 const analyze = (arr) => {
+  if(arr.length === 0){
+    return 0
+  }
   return {
     average: arr.reduce((acc, cur) => acc + cur) / arr.length,
     min: arr.sort((a, b) => a - b)[0],

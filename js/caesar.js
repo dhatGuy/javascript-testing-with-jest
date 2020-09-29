@@ -3,7 +3,9 @@ function isUpperCase(str) {
 }
 
 const caesar = (str, key) => {
-  if (key < 0) throw new Error("no negative value is allowed")
+  if (key < 0) {
+    throw new Error("no negative value is allowed")
+  }
   
   let cipherText = "";
 
@@ -20,5 +22,7 @@ const caesar = (str, key) => {
   }
   return cipherText;
 };
+
+caesar("hekllo", 1)
 
 module.exports = caesar;
